@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farm Con 2026 Recap</title>
+
+    <!-- PWA Meta Tags -->
+    <meta name="description" content="Your complete reference for insights, strategies, and action items from Farm Con 2026">
+    <meta name="theme-color" content="#2e7d32">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="FarmCon26">
+
+    <!-- Manifest and Icons -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+    <link rel="apple-touch-icon" href="icons/icon.svg">
+
     <link rel="stylesheet" href="css/styles.css">
     <style>
         .hero-banner {
@@ -292,5 +305,16 @@
     <footer>
         <p>Farm Con 2026 Recap | Private Resource</p>
     </footer>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('Service Worker registered'))
+                    .catch(err => console.log('Service Worker not registered', err));
+            });
+        }
+    </script>
 </body>
 </html>

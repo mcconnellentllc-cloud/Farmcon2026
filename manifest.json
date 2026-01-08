@@ -1,0 +1,18 @@
+{
+  "name": "Farm Con 2026 Recap",
+  "short_name": "FarmCon26",
+  "description": "Your complete reference for insights, strategies, and action items from Farm Con 2026",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1a3c1a",
+  "theme_color": "#2e7d32",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
