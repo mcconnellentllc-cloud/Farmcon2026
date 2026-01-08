@@ -5,6 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farm Con 2026 Recap</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .hero-banner {
+            background: linear-gradient(135deg, #1a3c1a 0%, #2d5a2d 50%, #1a4d1a 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        .hero-banner h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        .hero-banner p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .hero-banner .date-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        .sessions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .session-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 5px solid #2e7d32;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .session-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        .session-card h3 {
+            color: #1a4d1a;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        .session-card .speaker {
+            color: #558b2f;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        .session-card p {
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        .session-card .btn {
+            background: #2e7d32;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+        .session-card .btn:hover {
+            background: #1b5e20;
+        }
+        .section-title {
+            color: #1a4d1a;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #2e7d32;
+        }
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .quick-link {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            border: 2px solid transparent;
+            transition: all 0.2s;
+        }
+        .quick-link:hover {
+            border-color: #2e7d32;
+            background: #e8f5e9;
+        }
+        .quick-link h4 {
+            color: #1a4d1a;
+            margin-bottom: 0.25rem;
+        }
+        .quick-link p {
+            font-size: 0.85rem;
+            color: #666;
+            margin: 0;
+        }
+        .key-takeaway {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-left: 5px solid #2e7d32;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        .key-takeaway h3 {
+            color: #1b5e20;
+            margin-bottom: 0.5rem;
+        }
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .insight-card {
+            background: white;
+            padding: 1.25rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+            border-top: 4px solid #2e7d32;
+        }
+        .insight-card h4 {
+            color: #1a4d1a;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .insight-card p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        footer {
+            background: #1a3c1a;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -18,162 +171,122 @@
             <li><a href="pages/traceability.html">Traceability</a></li>
             <li><a href="pages/crop-insurance.html">Crop Insurance</a></li>
             <li><a href="pages/resources.html">Resources</a></li>
-            <li><a href="pages/speakers.html">Speakers</a></li>
             <li><a href="pages/contacts.html">Contacts</a></li>
         </ul>
     </nav>
 
     <main class="container">
-        <section class="hero">
+        <!-- Hero Banner -->
+        <section class="hero-banner">
+            <span class="date-badge">January 2026</span>
             <h2>Farm Con 2026 Recap</h2>
-            <p>Key insights, resources, and action items from the conference.</p>
+            <p>Your complete reference for insights, strategies, and action items from the conference.</p>
         </section>
 
-        <!-- Keynote Speaker Card -->
-        <section class="quick-stats">
-            <div class="stat-card" style="background: linear-gradient(135deg, #1a4d1a 0%, #2e7d32 100%); color: white; grid-column: span 2;">
-                <h3 style="color: #a5d6a7;">Keynote Speaker</h3>
-                <p style="font-size: 1.25rem; font-weight: bold; margin: 0.5rem 0;">Blake Brewer</p>
-                <p style="opacity: 0.9;">The Legacy Letter - Leave no doubt. Live the legacy.</p>
-                <a href="pages/keynote-blake-brewer.html" class="btn" style="background: white; color: #1a4d1a;">View Keynote</a>
+        <!-- Main Sessions -->
+        <h2 class="section-title">Conference Sessions</h2>
+        <div class="sessions-grid">
+            <div class="session-card">
+                <h3>Keynote: The Legacy Letter</h3>
+                <p class="speaker">Blake Brewer</p>
+                <p>Leave no doubt. Live the legacy. Building meaning beyond success.</p>
+                <a href="pages/keynote-blake-brewer.html" class="btn">View Keynote</a>
             </div>
-            <div class="stat-card" style="background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%); color: white; grid-column: span 2;">
-                <h3 style="color: #bbdefb;">Weather Outlook</h3>
-                <p style="font-size: 1.1rem; font-weight: bold; margin: 0.5rem 0;">Knowing When Changes Everything</p>
-                <p style="opacity: 0.9;">Pattern predictions & what's coming</p>
-                <a href="pages/weather.html" class="btn" style="background: white; color: #0d47a1;">View Weather</a>
+            <div class="session-card">
+                <h3>Weather Outlook 2026</h3>
+                <p class="speaker">Weather 20/20</p>
+                <p>Pattern predictions, LRC cycles, and turning weather into profitable decisions.</p>
+                <a href="pages/weather.html" class="btn">View Weather</a>
             </div>
-            <div class="stat-card" style="background: linear-gradient(135deg, #ff6f00 0%, #ff8f00 100%); color: white; grid-column: span 2;">
-                <h3 style="color: #fff3e0;">Future of Farming</h3>
-                <p style="font-size: 1.1rem; font-weight: bold; margin: 0.5rem 0;">Panel Discussion</p>
-                <p style="opacity: 0.9;">Where agriculture is headed</p>
-                <a href="pages/future-of-farming.html" class="btn" style="background: white; color: #e65100;">View Panel</a>
+            <div class="session-card">
+                <h3>Building the Brand</h3>
+                <p class="speaker">Erika Ayers Badan</p>
+                <p>Stand out. Sell. Automate. Think of customers as fans, not buyers.</p>
+                <a href="pages/building-the-brand.html" class="btn">View Session</a>
             </div>
-            <div class="stat-card" style="background: linear-gradient(135deg, #6a1b9a 0%, #8e24aa 100%); color: white; grid-column: span 2;">
-                <h3 style="color: #e1bee7;">Building the Brand</h3>
-                <p style="font-size: 1.1rem; font-weight: bold; margin: 0.5rem 0;">Stand Out. Sell. Automate.</p>
-                <p style="opacity: 0.9;">How farmers build a brand</p>
-                <a href="pages/building-the-brand.html" class="btn" style="background: white; color: #6a1b9a;">View Session</a>
+            <div class="session-card">
+                <h3>Meristem CEO</h3>
+                <p class="speaker">Strategic Intent</p>
+                <p>8% market by 2028. Cutting input costs through direct partnerships.</p>
+                <a href="pages/meristem.html" class="btn">View Session</a>
             </div>
-            <div class="stat-card" style="background: linear-gradient(135deg, #33691e 0%, #558b2f 100%); color: white; grid-column: span 2;">
-                <h3 style="color: #c5e1a5;">Meristem CEO</h3>
-                <p style="font-size: 1.1rem; font-weight: bold; margin: 0.5rem 0;">Strategic Intent</p>
-                <p style="opacity: 0.9;">8% US Crop Input market by 2028</p>
-                <a href="pages/meristem.html" class="btn" style="background: white; color: #33691e;">View Session</a>
+            <div class="session-card">
+                <h3>Future of Farming</h3>
+                <p class="speaker">Panel Discussion</p>
+                <p>Where agriculture is headed and how to position for success.</p>
+                <a href="pages/future-of-farming.html" class="btn">View Panel</a>
             </div>
-        </section>
-
-        <section class="quick-stats">
-            <div class="stat-card">
-                <h3>Key Insights</h3>
-                <p>Breakthrough moments from sessions</p>
-                <a href="pages/aha-moments.html" class="btn">View All</a>
-            </div>
-            <div class="stat-card">
-                <h3>Resources</h3>
-                <p>Links to tools and articles</p>
-                <a href="pages/resources.html" class="btn">Browse</a>
-            </div>
-            <div class="stat-card">
-                <h3>Discussions</h3>
-                <p>Topics to explore further</p>
-                <a href="pages/discussions.html" class="btn">View</a>
-            </div>
-            <div class="stat-card">
-                <h3>Contacts</h3>
-                <p>Stay connected with the group</p>
-                <a href="pages/contacts.html" class="btn">View</a>
-            </div>
-        </section>
-
-        <section class="quick-stats">
-            <div class="stat-card">
-                <h3>Big Beautiful Bill</h3>
-                <p>Programs and benefits for farmers</p>
-                <a href="pages/farm-bill-benefits.html" class="btn">View Benefits</a>
-            </div>
-            <div class="stat-card">
-                <h3>Traceability</h3>
-                <p>The REAL value opportunity</p>
-                <a href="pages/traceability.html" class="btn">Learn More</a>
-            </div>
-            <div class="stat-card">
-                <h3>Crop Insurance</h3>
-                <p>NE Colorado coverage guide</p>
-                <a href="pages/crop-insurance.html" class="btn">Coverage Guide</a>
-            </div>
-            <div class="stat-card">
-                <h3>Carbon Warning</h3>
-                <p>Be careful before selling</p>
-                <a href="pages/carbon-markets.html" class="btn">Read First</a>
-            </div>
-            <div class="stat-card">
-                <h3>E15 Ethanol</h3>
-                <p>Closer than ever to mandate</p>
-                <a href="pages/ethanol-e15.html" class="btn">Learn More</a>
-            </div>
-            <div class="stat-card">
+            <div class="session-card">
                 <h3>AI in Agriculture</h3>
-                <p>Zack Kass session notes</p>
+                <p class="speaker">Zack Kass</p>
+                <p>How artificial intelligence is transforming farming operations.</p>
                 <a href="pages/ai-agriculture.html" class="btn">View Notes</a>
             </div>
+        </div>
+
+        <!-- Key Takeaway -->
+        <section class="key-takeaway">
+            <h3>Key Takeaway: Traceability is the Future</h3>
+            <p><strong>The real value of the Big Beautiful Bill is TRACEABILITY.</strong> Build your systems now. Programs are being funded - don't leave money on the table. US crop quality is amazing compared to world markets. Position yourself to capture that premium.</p>
         </section>
 
-        <section class="key-insight">
-            <h3>Money Available NOW</h3>
-            <p><strong>The midterms are a "have to" for Trump - he needs rural America.</strong> Programs are being funded. Don't leave money on the table. Check our <a href="pages/traceability.html">Traceability page</a> for specific programs with funding amounts.</p>
-        </section>
+        <!-- Quick Links -->
+        <h2 class="section-title">Quick Reference</h2>
+        <div class="quick-links">
+            <a href="pages/traceability.html" class="quick-link">
+                <h4>Traceability</h4>
+                <p>Real value opportunity</p>
+            </a>
+            <a href="pages/crop-insurance.html" class="quick-link">
+                <h4>Crop Insurance</h4>
+                <p>Coverage guide</p>
+            </a>
+            <a href="pages/farm-bill-benefits.html" class="quick-link">
+                <h4>Farm Bill</h4>
+                <p>Programs & benefits</p>
+            </a>
+            <a href="pages/carbon-markets.html" class="quick-link">
+                <h4>Carbon Markets</h4>
+                <p>Be careful first</p>
+            </a>
+            <a href="pages/ethanol-e15.html" class="quick-link">
+                <h4>E15 Ethanol</h4>
+                <p>Mandate updates</p>
+            </a>
+            <a href="pages/aha-moments.html" class="quick-link">
+                <h4>Key Insights</h4>
+                <p>All breakthrough moments</p>
+            </a>
+        </div>
 
-        <section class="recent-highlights">
-            <h2>Key Insights from Farm Con 2026</h2>
-            <div class="highlight-grid">
-                <article class="highlight-card">
-                    <span class="date">January 2026</span>
-                    <h3>US Quality Advantage</h3>
-                    <p><strong>"US crop quality is amazing in comparison to the world market."</strong> How do we capture that value? Traceability is the answer.</p>
-                    <span class="tag">Opportunity</span>
-                </article>
-                <article class="highlight-card">
-                    <span class="date">January 2026</span>
-                    <h3>Amino Acid Grading</h3>
-                    <p><strong>"Change the grading system to actual amino acid value."</strong> This would let US capture our true quality advantage.</p>
-                    <span class="tag">Quality</span>
-                </article>
-                <article class="highlight-card">
-                    <span class="date">January 2026</span>
-                    <h3>Soybean Price Warning</h3>
-                    <p><strong>Soybeans possible sub $10.</strong> Time to review risk management and insurance coverage levels.</p>
-                    <span class="tag">Market Outlook</span>
-                </article>
-                <article class="highlight-card">
-                    <span class="date">January 2026</span>
-                    <h3>Insurance is Essential</h3>
-                    <p><strong>"Insure the crap out of the commodities!"</strong> We're NOT the low cost producer - coverage is critical.</p>
-                    <span class="tag">Risk Management</span>
-                </article>
-                <article class="highlight-card">
-                    <span class="date">January 2026</span>
-                    <h3>Traceability = Real Value</h3>
-                    <p><strong>"The real value of the Big Beautiful Bill is TRACEABILITY."</strong> Build systems now to capture premiums.</p>
-                    <span class="tag">Strategy</span>
-                </article>
-                <article class="highlight-card">
-                    <span class="date">January 2026</span>
-                    <h3>Carbon: Be Careful</h3>
-                    <p><strong>"Be careful on selling carbon."</strong> Don't lock in low prices for long terms. Build traceability instead.</p>
-                    <span class="tag">Warning</span>
-                </article>
+        <!-- Top Insights -->
+        <h2 class="section-title">Top Insights</h2>
+        <div class="insights-grid">
+            <div class="insight-card">
+                <h4>US Quality Advantage</h4>
+                <p>"US crop quality is amazing in comparison to the world market." Capture that value through traceability.</p>
             </div>
-            <p style="text-align: center; margin-top: 1rem;"><a href="pages/aha-moments.html" class="btn">View All Key Insights</a></p>
-        </section>
-
-        <section class="session-notes">
-            <h2>Session Notes</h2>
-            <p>Session notes and key takeaways from talks and workshops.</p>
-            <div class="notes-placeholder">
-                <p><em>Click on any section above to explore the content.</em></p>
+            <div class="insight-card">
+                <h4>Insurance is Essential</h4>
+                <p>"Insure the crap out of the commodities!" We're NOT the low cost producer - coverage is critical.</p>
             </div>
-        </section>
+            <div class="insight-card">
+                <h4>Think Like a Business Owner</h4>
+                <p>Customer acquisition, retention plans, newsletters to landlords. Be better than the competition.</p>
+            </div>
+            <div class="insight-card">
+                <h4>Flow is Key</h4>
+                <p>Work in joy. Work in flow. If you have good flow, people will want to join you.</p>
+            </div>
+            <div class="insight-card">
+                <h4>Know Your Why</h4>
+                <p>What's your purpose? What 3 things do you want to execute? Do what you say you're going to do.</p>
+            </div>
+            <div class="insight-card">
+                <h4>Find Advisors</h4>
+                <p>Surround yourself with advisors - this is GOLD. Find someone who has failed and learned.</p>
+            </div>
+        </div>
     </main>
 
     <footer>
